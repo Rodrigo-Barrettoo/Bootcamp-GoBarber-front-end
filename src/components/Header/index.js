@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import Notfications from '~/components/Notfications';
+
 import { Container, Content, Profile } from './styles';
 
 import logo from '~/assets/logo-purple.svg';
@@ -15,6 +17,8 @@ export default function Header() {
         </nav>
 
         <aside>
+          <Notfications />
+
           <Profile>
             <div>
               <strong>Rodrigo Barreto</strong>
