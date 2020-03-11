@@ -1,9 +1,36 @@
-import styled, { css } from 'styled-components';
+import styled, { css, keyframes } from 'styled-components';
 import PerfectScrollbar from 'react-perfect-scrollbar';
 import { lighten } from 'polished';
 
 export const Container = styled.div`
   position: relative;
+`;
+
+const scaleNotification = keyframes`
+
+  0% {
+    transform: scale(1, 1);
+  }
+
+  2.5% {
+    transform: scale(1.5, 1.5);
+  }
+
+  5% {
+    transform: scale(1, 1);
+  }
+
+  7.5% {
+    transform: scale(1.5, 1.5);
+  }
+
+  10% {
+    transform: scale(1, 1);
+  }
+
+  100% {
+    transform: scale(1, 1);
+  }
 `;
 
 export const Badge = styled.button`
@@ -14,6 +41,11 @@ export const Badge = styled.button`
   ${props =>
     props.hasUnread &&
     css`
+      > svg {
+        animation: ${scaleNotification} 5s linear;
+        animation-iteration-count: ${props.hasUnread ? 'infinite' : 0};
+        animation-delay: 2s;
+      }
       &::after {
         position: absolute;
         right: 0;
