@@ -56,7 +56,7 @@ export const Badge = styled.button`
         content: '';
         border-radius: 50%;
       }
-    `}
+    `};
 `;
 
 export const NotificationList = styled.div`
@@ -68,6 +68,7 @@ export const NotificationList = styled.div`
   border-radius: 4px;
   padding: 15px 5px;
   display: ${props => (props.visible ? 'block' : 'none')};
+  z-index: 999;
 
   &::before {
     content: '';

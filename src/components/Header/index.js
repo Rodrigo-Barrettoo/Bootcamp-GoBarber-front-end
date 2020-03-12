@@ -10,7 +10,6 @@ import logo from '~/assets/logo-purple.svg';
 
 export default function Header() {
   const profile = useSelector(state => state.user.profile);
-  console.tron.log(profile.avatar);
 
   return (
     <Container>
