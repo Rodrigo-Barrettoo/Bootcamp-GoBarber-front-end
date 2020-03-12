@@ -42,7 +42,7 @@ export default function AvatarInput() {
           src={
             preview || 'https://api.adorable.io/avatars/128/abott@adorable.png'
           }
-          alt=""
+          alt="GoBarber"
         />
         <input
           type="file"
